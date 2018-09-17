@@ -1,29 +1,29 @@
 import test from 'ava';
 import Bluebird from 'bluebird';
-import m from './';
+import isPromise from '.';
 
 test(t => {
-	t.true(m(Promise.resolve()));
-	t.true(m(global.Promise.resolve()));
-	t.true(m(Bluebird.resolve()));
-	t.true(m({
+	t.true(isPromise(Promise.resolve()));
+	t.true(isPromise(global.Promise.resolve()));
+	t.true(isPromise(Bluebird.resolve()));
+	t.true(isPromise({
 		then: () => {},
 		catch: () => {}
 	}));
-	t.false(m({
+	t.false(isPromise({
 		then: () => {}
 	}));
-	t.false(m({
+	t.false(isPromise({
 		catch: () => {}
 	}));
-	t.false(m({
+	t.false(isPromise({
 		then: '🦄'
 	}));
-	t.false(m({}));
-	t.false(m([]));
-	t.false(m(undefined));
-	t.false(m(null));
-	t.false(m('🦄'));
-	t.false(m(0));
-	t.false(m(true));
+	t.false(isPromise({}));
+	t.false(isPromise([]));
+	t.false(isPromise(undefined));
+	t.false(isPromise(null));
+	t.false(isPromise('🦄'));
+	t.false(isPromise(0));
+	t.false(isPromise(true));
 });
