@@ -2,7 +2,7 @@ import test from 'ava';
 import Bluebird from 'bluebird';
 import isPromise from '.';
 
-test(t => {
+test('main', t => {
 	t.true(isPromise(Promise.resolve()));
 	t.true(isPromise(global.Promise.resolve()));
 	t.true(isPromise(Bluebird.resolve()));
