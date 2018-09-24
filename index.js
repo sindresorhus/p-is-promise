@@ -1,5 +1,5 @@
 'use strict';
-module.exports = x => (
+const isPromise = x => (
 	x instanceof Promise ||
 	(
 		x !== null &&
@@ -8,3 +8,6 @@ module.exports = x => (
 		typeof x.catch === 'function'
 	)
 );
+
+module.exports = isPromise;
+module.exports.default = isPromise;
