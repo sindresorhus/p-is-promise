@@ -1,5 +1,5 @@
-import {expectType} from 'tsd-check';
-import isPromise from '.';
+import {expectType} from 'tsd';
+import isPromise = require('.');
 
 expectType<boolean>(isPromise('🦄'));
 
