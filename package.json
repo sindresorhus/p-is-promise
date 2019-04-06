@@ -13,7 +13,7 @@
 		"node": ">=6"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd-check"
+		"test": "xo && ava && tsd"
 	},
 	"files": [
 		"index.js",
@@ -34,9 +34,9 @@
 		"bluebird"
 	],
 	"devDependencies": {
-		"ava": "^0.25.0",
-		"bluebird": "^3.4.6",
-		"tsd-check": "^0.2.1",
-		"xo": "^0.23.0"
+		"ava": "^1.4.1",
+		"bluebird": "^3.5.4",
+		"tsd": "^0.7.2",
+		"xo": "^0.24.0"
 	}
 }
