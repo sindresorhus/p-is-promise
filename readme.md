@@ -36,8 +36,3 @@ pIsPromise('🦄');
 ## Related
 
 - [More…](https://github.com/sindresorhus/promise-fun)
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
