@@ -27,3 +27,10 @@ test('main', t => {
 	t.false(isPromise(0));
 	t.false(isPromise(true));
 });
+
+test('function', t => {
+	const fixture = () => {};
+	fixture.then = () => {};
+	fixture.catch = () => {};
+	t.true(isPromise(fixture));
+});

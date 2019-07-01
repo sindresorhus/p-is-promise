@@ -1,12 +1,14 @@
 'use strict';
 
-const isPromise = input => (
-	input instanceof Promise ||
+const isObject = value => value !== null &&
+	(typeof value === 'object' || typeof value === 'function');
+
+const isPromise = value => (
+	value instanceof Promise ||
 	(
-		input !== null &&
-		typeof input === 'object' &&
-		typeof input.then === 'function' &&
-		typeof input.catch === 'function'
+		isObject(value) &&
+		typeof value.then === 'function' &&
+		typeof value.catch === 'function'
 	)
 );
 
