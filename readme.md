@@ -1,4 +1,4 @@
-# p-is-promise [![Build Status](https://travis-ci.org/sindresorhus/p-is-promise.svg?branch=master)](https://travis-ci.org/sindresorhus/p-is-promise)
+# p-is-promise
 
 > Check if something is a promise
 
