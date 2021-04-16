@@ -1,6 +1,6 @@
 {
 	"name": "p-is-promise",
-	"version": "3.0.0",
+	"version": "4.0.0",
 	"description": "Check if something is a promise",
 	"license": "MIT",
 	"repository": "sindresorhus/p-is-promise",
