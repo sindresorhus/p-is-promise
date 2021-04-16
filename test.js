@@ -1,6 +1,6 @@
 import test from 'ava';
 import Bluebird from 'bluebird';
-import isPromise from '.';
+import isPromise from './index.js';
 
 test('main', t => {
 	t.true(isPromise(Promise.resolve()));

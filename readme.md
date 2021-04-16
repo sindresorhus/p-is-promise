@@ -8,35 +8,32 @@ You most likely don't need this. Just pass your value to `Promise.resolve()` and
 
 Can be useful if you need to create a fast path for a synchronous operation.
 
-
 ## Install
 
 ```
 $ npm install p-is-promise
 ```
 
-
 ## Usage
 
 ```js
-const pIsPromise = require('p-is-promise');
-const Bluebird = require('bluebird');
+import isPromise from 'p-is-promise';
+import Bluebird from 'bluebird';
 
-pIsPromise(Promise.resolve('🦄'));
+isPromise(Promise.resolve('🦄'));
 //=> true
 
-pIsPromise(Bluebird.resolve('🦄'));
+isPromise(Bluebird.resolve('🦄'));
 //=> true
 
-pIsPromise('🦄');
+isPromise('🦄');
 //=> false
 ```
 
-
 ## Related
 
+- [is](https://github.com/sindresorhus/is) - Type check values
 - [More…](https://github.com/sindresorhus/promise-fun)
-
 
 ---
 

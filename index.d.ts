@@ -1,16 +1,14 @@
 /**
-Check if `value` is a ES2015 promise.
+Check if a value is a promise.
 
 @param value - Value to be checked.
 
 @example
 ```
-import isPromise = require('p-is-promise');
+import isPromise from 'p-is-promise';
 
 isPromise(Promise.resolve('🦄'));
 //=> true
 ```
 */
-declare function pIsPromise(value: unknown): value is Promise<unknown>;
-
-export = pIsPromise;
+export default function isPromise<T>(value: unknown): value is Promise<T>;

@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import isPromise = require('.');
+import isPromise from './index.js';
 
 expectType<boolean>(isPromise('🦄'));
 
